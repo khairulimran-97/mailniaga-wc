@@ -18,14 +18,18 @@ define( 'MAILNIAGA_PLUGIN_PATH', __DIR__ );
 define( 'MAILNIAGA_PLUGIN_VERSION', '1.0.0' );
 
 
+
 require_once MAILNIAGA_PLUGIN_PATH . '/includes/functions.php';
-require_once MAILNIAGA_PLUGIN_PATH . '/includes/mailniaga-v2-setting.php';
+require_once MAILNIAGA_PLUGIN_PATH . '/includes/mailniaga-setting.php';
 require_once MAILNIAGA_PLUGIN_PATH . '/includes/mailniaga-checkout.php';
-require_once MAILNIAGA_PLUGIN_PATH . '/includes/mailniaga-v2-api.php';
+require_once MAILNIAGA_PLUGIN_PATH . '/includes/mailniaga-api.php';
+
+
 
 
 function WP_MAILNIAGA() {
 	return WP_MAILNIAGA::get_instance();
+
 }
 
 
@@ -46,7 +50,6 @@ function WP_MAILNIAGA_Integration() {
 
 // Finally, initialize the Plugin.
 WP_MAILNIAGA();
-WC_Settings_MailNiaga::init();
 
 
 
